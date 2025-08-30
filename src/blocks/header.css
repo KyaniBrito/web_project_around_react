@@ -1,0 +1,44 @@
+.header {
+  width: 880px;
+  height: 120px;
+  margin: 45px auto 0;
+  color: #fff;
+}
+
+.header__line {
+  width: 880px;
+  opacity: 0.7;
+  border-width: 1px;
+  border: 1px solid #545454;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 700px;
+  }
+
+  .header__line {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .header {
+    width: 320px;
+    height: 56px;
+    margin-top: 28px;
+  }
+
+  .header__logo {
+    width: 126px;
+    height: 24px;
+    margin-left: 27px;
+    margin-bottom: 32px;
+  }
+
+  .header__line {
+    width: 318.4px;
+    margin: 0;
+    padding: 0;
+  }
+}

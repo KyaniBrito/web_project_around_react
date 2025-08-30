@@ -1,0 +1,19 @@
+# Dependências
+node_modules/
+
+# Build output
+dist/
+
+# Logs de npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variáveis de ambiente
+.env*
+
+# Arquivos do sistema
+.DS_Store
+
+# Cache do Vite
+.vite/
