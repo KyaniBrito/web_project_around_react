@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-.elements__card {
+.card__elements {
   max-height: 361px;
   width: 282px;
   border-radius: 10px;
@@ -16,13 +16,13 @@
   overflow: hidden;
 }
 
-.elements__card-image {
+.card__image {
   width: 282px;
   height: 282px;
   object-fit: cover;
 }
 
-.elements__card-label {
+.card__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
   margin: 18px 15px 31px 21px;
 }
 
-.elements__card-delete-button {
+.card__delete-button {
   background-image: url(../images/Trash.svg);
   background-color: transparent;
   border: none;
@@ -42,11 +42,11 @@
   position: absolute;
 }
 
-.elements__card-delete-button:hover {
+.card__delete-button:hover {
   opacity: 50%;
 }
 
-.elements__card-label-place {
+.card__title {
   font-family: "Inter";
   font-weight: 900;
   font-size: 24px;
@@ -57,7 +57,7 @@
   overflow: hidden;
 }
 
-.elements__card-label-button {
+.card__like-button {
   background-image: url(../images/like\ button.svg);
   width: 21px;
   height: 19px;
@@ -66,11 +66,11 @@
   padding: 0;
 }
 
-.elements__card-label-button:hover {
+.card__like-button:hover {
   opacity: 50%;
 }
 
-.elements__card-label-button_active {
+.card__like-button_active {
   background-image: url(../images/Likebuttonactive.svg);
 }
 

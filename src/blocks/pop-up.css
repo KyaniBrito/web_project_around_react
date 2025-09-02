@@ -1,44 +1,44 @@
 .popup {
-  position: relative;
-}
-
-.overlay {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-.popup__form {
+.popup__content {
+  position: relative;
   background-color: #fff;
   width: 430px;
-  height: 330px;
-  top: 195px;
+
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  align-items: flex-start;
   box-shadow: 0px 0px 25px 0px #00000026;
   padding-bottom: 36.5px;
 }
 
+.popup__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .popup__close-button {
   position: absolute;
   right: -40px;
   top: -60px;
-  background-image: url(../images/Close\ Icon.png);
+  background-image: url(../images/close-icon.png);
   background-size: 40px 40px;
   width: 40px;
   height: 40px;
   border: none;
-  background-color: transparent;
 }
 
 .popup__close-button:hover {
@@ -53,14 +53,12 @@
   align-items: center;
 }
 
-.popup__form-title {
+.popup__title {
   font-family: "Inter";
   font-weight: 900;
-  width: 330px;
   font-size: 24px;
   color: #000000;
   margin-top: 24px;
-  margin-right: auto;
   padding-left: 36px;
 }
 
@@ -68,15 +66,15 @@
   border: none;
   padding: 0;
   margin: 0 36px 0 36px;
-  height: 28px;
+  min-height: 28px;
 }
-.popup__form-label-name {
+.popup__form-first-label {
   max-width: 358px;
-  margin-top: 54px;
+
   display: block;
 }
 
-.popup__form-label-bio {
+.popup__form-second-label {
   margin: 0;
   display: block;
 }
@@ -100,6 +98,7 @@
   font-weight: 400;
   color: #fff;
   margin-top: auto;
+  margin-bottom: 30px;
 }
 
 .popup__form-save:hover {

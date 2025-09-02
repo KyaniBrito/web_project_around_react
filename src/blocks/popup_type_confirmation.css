@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.popup__confirm-title {
+.popup__confirm-title .popup__title {
   display: flex;
   font-size: 24px;
   font-weight: 900;
@@ -45,7 +45,7 @@
   opacity: 0.8;
 }
 
-.popup__confirm-close-button {
+.popup__close-button {
   position: absolute;
   right: -40px;
   top: -40px;

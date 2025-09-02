@@ -16,6 +16,9 @@
 
 .popup__image-container {
   position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: auto;
   height: auto;
@@ -38,7 +41,7 @@
   color: #ffffff;
 }
 
-.popup__image-close-button {
+.popup__close-button {
   position: absolute;
   right: -40px;
   top: -60px;
@@ -50,17 +53,12 @@
   background-color: transparent;
 }
 
-.image_pop-up__close-button:hover {
+.popup__close-button:hover {
   opacity: 50%;
 }
 
-.image_pop-up_opened {
-  display: flex;
-  justify-content: center;
-}
-
 @media screen and (max-width: 544px) {
-  .image_pop-up__close-button {
+  .popup__close-button {
     width: 30px;
     height: 30px;
     right: -30px;
