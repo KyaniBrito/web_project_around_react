@@ -8,7 +8,6 @@ import NewCard from "../NewCard/NewCard";
 import EditAvatar from "../EditAvatar/EditAvatar";
 import EditProfile from "../EditProfile/EditProfile";
 import Card from "../Card/Card";
-import ImagePopup from "../ImagePopup/ImagePopup";
 
 const cards = [
   {
@@ -28,8 +27,6 @@ const cards = [
     createdAt: "2019-07-05T08:11:58.324Z",
   },
 ];
-
-console.log(cards);
 
 export default function Main() {
   const [popup, setPopup] = useState(null);
@@ -57,12 +54,14 @@ export default function Main() {
             src={imgProfile}
             alt="homem de aparentemente 80 anos sorrindo com uma toca vermelha em um fundo azul"
           />
-          <button className="profile__avatar-edit">
+          <button
+            className="profile__avatar-edit"
+            onClick={() => handleOpenPopup(editAvatarPopup)}
+          >
             <img
               className="profile__avatar-edit-icon"
               src={iconEditImage}
               alt="sinal de edição do avatar"
-              onClick={() => handleOpenPopup(editAvatarPopup)}
             />
           </button>
         </div>
@@ -70,32 +69,37 @@ export default function Main() {
         <div className="profile__info">
           <div className="profile__info-line">
             <h4 className="profile__info-name">Jacques Cousteau</h4>
-            <button className="profile__info-edit">
-              <img
-                src={iconEditProfile}
-                alt="sinal de edição"
-                onClick={() => handleOpenPopup(editProfilePopup)}
-              />
+            <button
+              className="profile__info-edit"
+              onClick={() => handleOpenPopup(editProfilePopup)}
+            >
+              <img src={iconEditProfile} alt="sinal de edição" />
             </button>
           </div>
           <h6 className="profile__info-occupation">Explorador</h6>
         </div>
-
-        <button className="profile__add-button">
+        <button
+          className="profile__add-button"
+          onClick={() => handleOpenPopup(newCardPopup)}
+        >
           <img
             className="profile__add-button-icon"
             src={iconAddButton}
             alt="sinal de soma"
-            onClick={() => handleOpenPopup(newCardPopup)}
           />
         </button>
       </section>
 
       <section className="elements">
-        <ul className="elements__list"></ul>
-        {cards.map((card) => (
-          <Card key={card._id} card={card} handleOpenPopup={handleOpenPopup} />
-        ))}
+        <ul className="elements__list">
+          {cards.map((card) => (
+            <Card
+              key={card._id}
+              card={card}
+              handleOpenPopup={handleOpenPopup}
+            />
+          ))}
+        </ul>
       </section>
       {popup && (
         <Popup onClose={handleClosePopup} title={popup.title}>
