@@ -21,7 +21,6 @@
   flex-direction: column;
   align-items: flex-start;
   box-shadow: 0px 0px 25px 0px #00000026;
-  padding-bottom: 36.5px;
 }
 
 .popup__form {
@@ -70,7 +69,6 @@
 }
 .popup__form-first-label {
   max-width: 358px;
-
   display: block;
 }
 
